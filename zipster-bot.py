@@ -76,7 +76,7 @@ if __name__ == "__main__":
                 # === COMMUNITY CHECK ===
                 is_community = False
                 root_id = tweet.conversation_id if hasattr(tweet, 'conversation_id') else tweet_id
-                if root_id != tweet_id:  # ← THIS IS != NOT ≠
+                if root_id != tweet_id:
                     try:
                         root = client.get_tweet(root_id, tweet_fields=['context_annotations'])
                         if root.data and root.data.context_annotations:
